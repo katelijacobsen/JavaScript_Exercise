@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beregn Moms</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Beregn Moms</h1>
+      <label for="mouneh">Beløb i DKK</label>
+      <input type="number" id="mouneh" placeholder="DKK" />
+
+      <label for="moms">Moms %:</label>
+      <input type="number" id="moms" placeholder="Moms" />
+      <!-- Tilføjer en EventListener -->
+      <button onclick="MomsBeregner()">Beregn</button> 
+      <p id="output"></p>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

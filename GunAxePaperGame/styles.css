@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "GamePause";
+  src: url('/GPA/fonts/Game.woff2');
+}
+html {
+  --color-midnight-green: #02394a;
+  --color-yale-blue: #043565;
+  --color-savoy-blue: #4950b8;
+  --color-ultra-pink: #f26df9;
+  --color-rose-bonbon: #eb4b98;
+  --color-star-yellow: #ffce25;
+  --color-gradient: linear-gradient(180deg, #f985ff 0%, #d3106e 100%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-midnight-green);
+  font-family: 'GamePause';
+  color: #ffce25;
+  text-shadow: 0px 8px  var(--color-rose-bonbon);
+}
+
+h1 {
+  text-align: center;
+  font-size: 5vw;
+}
+
+#gamefield {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+#player1 {
+  --rot: -1;
+}
+
+#player2 {
+  --rot: 1;
+}
+
+.player {
+  transform: scale(var(--rot),1);
+  width: 40vw;
+  height: 30vw;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-image: url(paper.webp);
+  
+}
+
+.player.gun {
+  background-image: url(gun.png);
+}
+
+.player.paper {
+  background-image: url(paper.webp);
+}
+
+.player.axe {
+  transform: scale(var(--rot),1);
+  background-image: url(axe.webp);
+}
+
+.player.shake {
+  background-image: url(shake.webp);
+  transform-origin: left center;
+  animation: shake 1.8s ease-in 1 forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(0deg);
+  }
+  16% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(-40deg);
+  }
+  24% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(5deg);
+  }
+  32% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(0deg);
+  }
+  48% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(-40deg);
+  }
+  56% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(5deg);
+  }
+  64% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(0deg);
+  }
+  80% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(-40deg);
+  }
+  96% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(5deg);
+  }
+  100% {
+    transform: scale(var(--rot),1) translateX(calc((var(--rot) - 1) * 50%)) rotate(0deg);
+  }
+}
+
+#texts {
+  position: absolute;
+  width: 100%;
+  margin-top: 10vw;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+#buttons.disabled button {
+  filter: grayscale(100%) brightness(.75);
+}
+
+#buttons button {
+  background: none;
+  border: none;
+  background-size: 100%;
+  border-radius: 10vw;
+  width: 15vw;
+  height: 10vw;
+  transition: transform 0.1s ease-in-out;
+}
+
+
+button.rock {
+  background-image: url(button_rock.png);
+}
+
+.animation-container{
+  width: 300px;
+  height: 300px;
+  left: 5%;
+  top: -90%;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+.animation-container1{
+  width: 300px;
+  height: 300px;
+  left: 2%;
+  top: -50%;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+button.scissors {
+  background-image: url(button_scissors.png);
+}

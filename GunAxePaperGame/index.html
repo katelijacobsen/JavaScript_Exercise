@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rock Paper Scissors</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div id="gamefield">
+      <div id="player1" class="player"></div>
+      <div id="player2" class="player"></div>
+      <div id="texts">
+        <div id="lose" class="hidden">
+          <div class="animation-container1" id="loseAnimation"></div>
+          <h1>womb womb, loser.</h1>
+        </div>
+        <div id="win" class="hidden">
+          <div class="animation-container" id="winAnimation"></div>
+          <h1>Yes! Go Goblin!</h1>
+        </div>
+        <div id="draw" class="hidden">
+          <div class="animation-container1" id="drawAnimation"></div>
+          <h1>It's a tie</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="buttons">
+      <button class="gun">
+        <div class="lottie-container" id="gunIcon"></div>
+      </button>
+      <button class="axe">
+        <div class="lottie-container" id="axeIcon"></div>
+      </button>
+      <button class="paper">
+        <div class="lottie-container" id="paperIcon"></div>
+      </button>
+    </div>
+    <script src="./game/game.js"></script>
+    <script src="./game/lottie.js"></script>
+  </body>
+</html>
