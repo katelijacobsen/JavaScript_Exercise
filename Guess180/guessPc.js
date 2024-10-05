@@ -21,8 +21,8 @@ function startGame () {
 }
 
 function makeGuess(){
-    // guess = Math.floor((min + max) / 2); 
-    guess = randomNumber(min, max);  
+    guess = Math.floor((min + max) / 2); // for en bedre strategi
+    //guess = randomNumber(min, max);  
     printGuess.innerHTML = `Is it ${guess}?`;
     numGuesses += 1;
     numGuessesEl.innerHTML = numGuesses;
