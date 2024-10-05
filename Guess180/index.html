@@ -11,12 +11,13 @@
       <h1>Let the computer guess your number</h1>
       <p>Click 'start' when you're ready</p>
       <p>The computer will try to guess your number</p>
-      <p id="printGuess">Computer Guess</p>
+      <p>Number of guesses <span id="numGuesses">0</span> </p>
+      <p>Computer Guess <span id="printGuess">0</span></p>
       <p id="answer"></p>
         <button id="startGame" onclick="startGame()">start</button>
-        <button id="tooHigh" onclick="respond()">too high</button>
-        <button id="tooLow" onclick="respond()">too low</button>
-        <button id="correct" onclick="respond()">yup, perfect</button>
+        <button id="tooHigh" onclick="handleInput('tooHigh')">too high</button>
+        <button id="tooLow" onclick="handleInput('tooLow')">too low</button>
+        <button id="correct" onclick="handleInput('correct')">yup, perfect</button>
       </span>
     </main>
     <script src="guessPc.js"></script>
