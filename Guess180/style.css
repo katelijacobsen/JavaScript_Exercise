@@ -8,17 +8,18 @@ body {
   background-color: #f1f1f1;
   font-family: "Roboto", sans-serif;
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
 }
 main {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
 button {
-  background: linear-gradient(#e565ff, #8673d9);
+  background: -webkit-linear-gradient(#e565ff, #8673d9);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -31,6 +32,7 @@ button {
   transform: scale(1);
 }
 button:hover {
+  background: -webkit-linear-gradient(#13a0ca, #8673d9);
   transition: all 0.3s ease;
   transform: scale(1.1);
 }
