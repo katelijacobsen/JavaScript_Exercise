@@ -4,9 +4,8 @@
 function themeSwitcher() {
     const themeSwitcher = document.getElementById('data-theme');
     const theme = themeSwitcher.value;
-    if (theme) {
-        document.body.setAttribute('data-theme', theme);
-    }
+    document.body.setAttribute('data-theme', theme);
+    
 }
 /*Eventlistener*/
 // const themeSwitcher = document.getElementById('data-theme');
