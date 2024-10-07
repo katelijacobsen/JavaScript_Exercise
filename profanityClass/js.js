@@ -24,8 +24,3 @@ function replaceBadWords() {
     document.querySelector("dialog").showModal();
   }
 }
-
-// function isItSafe() {
-
-//   return false;
-// }
