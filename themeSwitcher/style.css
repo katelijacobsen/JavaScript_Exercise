@@ -104,3 +104,13 @@ select:focus {
   border-color: #ff7d00;
   outline: none;
 }
+
+h1, div, footer {
+    --delay: calc(1s + var(--i));
+    transition: .6s var(--delay, 0s);
+  
+    @starting-style {
+      translate: 0 -25%;
+      opacity: 0;
+    }
+  }
