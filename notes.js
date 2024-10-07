@@ -57,7 +57,7 @@ console.log(n2 + s1); // giver 21.
  console.log( null + 1 ); // giver 1. 
  console.log(undefined + 1); //giver NaN.
 
- // Falsy & truthy Øvesler.
+ // Falsy & truthy Øvelser.
 
 const value = "";
     if (value) {
