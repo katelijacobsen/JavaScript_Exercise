@@ -1,35 +1,106 @@
+@font-face {
+  font-family: "Bagerich";
+  src: url("Bagerich.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*Lav en attribute selector i CSS der rammer det tema der er valgt i data data-theme i body elementet.*/
 
 body {
-    transition: background-color 0.5s ease, color 0.5s ease;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+h1 {
+  font-family: "Bagerich";
+  font-size: 5rem;
+}
+h2 {
+  font-family: "Bagerich";
+  font-size: 2.5rem;
+}
+p {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 150%;
 }
 
+article,
+  footer {
+    padding: 5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+/*----------Themes----------*/
 body[data-theme="dark"] {
   background-color: #001524;
-  color: #FFECD1;
-  border: 1px solid #15616D;
+  color: #ffecd1;
+  border: 1px solid #15616d;
 
-    article {
-        display: flex;
-        color: #FFECD1;
-        border: 1px solid #15616D;
-    }
-    
+  article,
+  footer {
+    color: #ffecd1;
+    border: 2px solid #15616d;
+  }
 }
 
 body[data-theme="light"] {
-    background-color: #FFECD1;
-    color: #15616D;
-    border: 1px solid #001524;
-    
-      article {
-          display: flex;
-          color: #15616D;
-          border: 1px solid #001524;
-      }
-      
+  background-color: #ffecd1;
+  color: #15616d;
+  border: 1px solid #001524;
+
+  article,
+  footer {
+    color: #15616d;
+    border: 2px solid #15616d;
+  }
 }
+
 body[data-theme="hp"] {
+  background-color: #fff6ef;
+  color: #ff8827;
+  article,
+  footer {
+    color: #0e8f68;
+    border: 2px solid #6140bd;
+  }
+}
+/*-------------------------*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > .center {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+select {
+  margin: 1rem;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   background-color: #fff;
-  color: #111;
+  cursor: pointer;
+  transition: border-color 0.5s;
+}
+
+select:hover {
+  border-color: #888;
+}
+
+select:focus {
+  border-color: #ff7d00;
+  outline: none;
 }
