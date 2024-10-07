@@ -12,6 +12,16 @@ body {
   padding: 0;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+main {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+footer {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
 h1 {
   font-family: "Bagerich";
   font-size: 5rem;
@@ -27,52 +37,63 @@ p {
 }
 
 article,
-  footer {
-    padding: 5rem;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+footer {
+  padding: 5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 /*----------Themes----------*/
 body[data-theme="dark"] {
-  background-color: #001524;
-  color: #ffecd1;
-  border: 1px solid #15616d;
-
-  article,
-  footer {
-    color: #ffecd1;
-    border: 2px solid #15616d;
-  }
+  --header-bg-col: #001524;
+  --header-text-color: #ffecd1;
+  --main-bg-col: #001524;
+  --main-text-col: #15616d;
+  --footer-bg-col: #001524;
+  --footer-text-col: #ffecd1;
 }
 
 body[data-theme="light"] {
-  background-color: #ffecd1;
-  color: #15616d;
-  border: 1px solid #001524;
-
-  article,
-  footer {
-    color: #15616d;
-    border: 2px solid #15616d;
-  }
+    --header-bg-col: #ffecd1;
+  --header-text-color: #15616d;
+  --main-bg-col: #ffecd1;
+  --main-text-col: #15616d;
+  --footer-bg-col: #15616d;
+  --footer-text-col: #ffecd1;
 }
 
 body[data-theme="hp"] {
-  background-color: #32355e;
-  color: #8eaf98;
-  article,
-  footer {
-    color: #8eaf98;
-    border: 2px solid #e0b72d;
-  }
+    --header-bg-col: #32355e;
+  --header-text-color: #8eaf98;
+  --main-bg-col: #6d2715;
+  --main-text-col: #32355e;
+  --footer-bg-col: #e0b72d;
+  --footer-text-col: #15616d;
 }
 /*-------------------------*/
 header {
+  background-color: var(--header-bg-col);
+  color: var(--header-text-color);
+  border: var(--main-text-col);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+footer {
+  background-color: var(--footer-bg-col);
+  color: var(--footer-text-col);
+  border: var(--footer-text-col);
+}
+main {
+  background-color: var(--header-bg-col);
+  color: var(--header-text-color);
+  border: var(--main-text-col);
+}
+article {
+  background-color: var(--main-bg-col);
+  color: var(--header-text-col);
+  border:2px solid var(--main-text-col);
 }
 
 footer > .center {
@@ -105,12 +126,13 @@ select:focus {
   outline: none;
 }
 
-h1, div, footer {
-    --delay: calc(1s + var(--i));
-    transition: .6s var(--delay, 0s);
-  
-    @starting-style {
-      translate: 0 -25%;
-      opacity: 0;
-    }
+h1,
+div,
+footer {
+  --delay: calc(1s + var(--i));
+  transition: 0.6s var(--delay, 0s);
+  @starting-style {
+    translate: 0 -25%;
+    opacity: 0;
   }
+}
