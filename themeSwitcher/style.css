@@ -12,16 +12,7 @@ body {
   padding: 0;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-main {
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-footer {
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
+
 h1 {
   font-family: "Bagerich";
   font-size: 5rem;
@@ -128,7 +119,10 @@ select:focus {
 
 h1,
 div,
-footer {
+footer,
+body,
+header,
+main {
   --delay: calc(1s + var(--i));
   transition: 0.6s var(--delay, 0s);
   @starting-style {
