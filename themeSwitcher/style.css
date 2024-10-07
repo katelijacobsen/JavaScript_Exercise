@@ -59,12 +59,12 @@ body[data-theme="light"] {
 }
 
 body[data-theme="hp"] {
-  background-color: #fff6ef;
-  color: #ff8827;
+  background-color: #32355e;
+  color: #8eaf98;
   article,
   footer {
-    color: #0e8f68;
-    border: 2px solid #6140bd;
+    color: #8eaf98;
+    border: 2px solid #e0b72d;
   }
 }
 /*-------------------------*/
