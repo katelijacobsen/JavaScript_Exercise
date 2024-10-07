@@ -1,5 +1,9 @@
 /*Lav en attribute selector i CSS der rammer det tema der er valgt i data data-theme i body elementet.*/
 
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 body[data-theme="dark"] {
   background-color: #001524;
   color: #FFECD1;
