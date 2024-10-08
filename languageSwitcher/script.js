@@ -91,13 +91,25 @@ const texts = {
 };
 
 function updateContent(language) {
-  texts[language].texts.forEach((text) => {
-    const element = document.querySelector(text.location);
-    if (element) {
-      element.textContent = text.article || text.title;
-    }
-  });
-}
+    texts[language].texts.forEach((text) => {
+      const element = document.querySelector(text.location);
+      if (element) {
+        gsap.to(element, {
+          duration: 0.5,
+          opacity: 0, 
+          y: 20,      
+          onComplete: () => {
+            element.textContent = text.article || text.title;
+            gsap.to(element, {
+              duration: 0.5,
+              opacity: 1, 
+              y: 0,       
+            });
+          }
+        });
+      }
+    });
+  }
 
 function toggleLanguage() {
   let languageSwitcher = document.getElementById("language-toggle");
