@@ -22,8 +22,7 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0 5vw; 
-    white-space: nowrap;
-    overflow: hidden;
+    overflow-wrap: break-word;
 }
 
 h1, p, span {
