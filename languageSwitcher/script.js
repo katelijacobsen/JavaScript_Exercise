@@ -114,10 +114,10 @@ function updateContent(language) {
 function toggleLanguage() {
   let languageSwitcher = document.getElementById("language-toggle");
   if (languageSwitcher.checked) {
-    updateContent("de");
+    updateContent("dk");
     languageSwitcher.labels[0].textContent = "";
   } else {
-    updateContent("dk");
+    updateContent("de");
     languageSwitcher.labels[0].textContent = "";
   }
 }
