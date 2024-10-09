@@ -34,14 +34,13 @@ span{
 }
 
 h1 {
-    font-size: 5rem; 
-    line-height: 1.2;
+    font-size: clamp(3.7509rem, 4.0369rem + -0.1845vw, 4rem); 
 }
 
 p {
     font-family: 'Helvetica';
     line-height: 1.5;
-    font-size: 1.5rem; 
+    font-size: clamp(1.2rem, 1.1416rem + 0.292vw, 1.5941rem); 
 }
 
 span {
