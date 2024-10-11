@@ -92,3 +92,9 @@ presentPet( name, "black");
 
 
 
+function defaultValues (from, text= "Hello", to = "World") {
+    console.log(from + " " + text + " " + to);
+
+};
+
+defaultValues("Hello");
