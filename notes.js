@@ -98,3 +98,9 @@ function defaultValues (from, text= "Hello", to = "World") {
 };
 
 defaultValues("Hello");
+
+
+//Unik ID
+const uniqueid = crypto.randomUUID();
+
+console.log("din id er :" + uniqueid);
